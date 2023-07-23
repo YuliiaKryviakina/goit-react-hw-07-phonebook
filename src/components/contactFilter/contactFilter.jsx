@@ -1,12 +1,12 @@
-import { useDispatch } from "react-redux";
-import { setStatusFilter } from "redux/filterSlice";
-import { useGetContactsQuery } from "redux/contactsApi";
+import { useDispatch } from 'react-redux';
+import { setStatusFilter } from 'redux/filterSlice';
+import { useGetContactsQuery } from 'redux/contactsApi';
 
 export default function ContactFilter() {
   const dispatch = useDispatch();
   const { data: contacts, isLoading } = useGetContactsQuery();
 
-  const handleFilterChange = (e) => {
+  const handleFilterChange = e => {
     dispatch(setStatusFilter(e.target.value));
   };
 

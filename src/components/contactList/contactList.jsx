@@ -1,7 +1,6 @@
 import { useSelector } from "react-redux";
 import Notiflix from "notiflix";
 import css from "./contactList.module.css";
-
 import {
   useGetContactsQuery,
   useDeleteContactsMutation,
@@ -21,9 +20,6 @@ export default function ContactList() {
 
   return (
     <>
-      {/* {visibleContacts.length === 0 ? (
-        <div>Empty</div>
-      ) : ( */}
       {isLoading ? <div>Loading...</div> : ""}
       <ul>
         {!isLoading &&
